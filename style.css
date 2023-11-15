@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+padding: 0;
+margin: 0;
+font-family: 'Josefin Sans', sans-serif;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.main-wrapper {
+  width: auto;
+  background-image: url("images/bg-pattern-desktop.svg");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.left-column {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-column {
+  flex: 1;
+}
+
+/* Logo */
+.logo-container {
+  padding: 0px 0px 200px 100px;
+}
+
+/* Main Photo */
+.photo-container {
+  flex: 1;
+  position: relative;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info Container */
+.main-header-container {
+  margin: -50px 0px 0px 100px;
+}
+
+.main-header-container h1 {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+  font-size: 2.75rem;
+  letter-spacing: 10px;
+  margin: 0px; /*top right bottom left */
+  padding: 0px 0px 5px 0px;
+  
+}
+
+.main-header-container h2 {
+  color: black;
+  font-weight: 600;
+  font-size: 2.75rem;
+  letter-spacing: 10px;
+  margin: 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+.main-header-container p {
+  color:  hsl(0, 36%, 70%);
+  font-weight: 400;
+  font-size: .8rem;
+  width: 45%;
+}
+
+/*Form*/
+
+.email-container {
+ padding: 0px 0px 0px 100px;
+}
+
+.input-wrapper {
+  position: flex;
+  align-items: center; 
+}
+
+input[type=email] {
+  width: 40%;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  opacity: 40%;
+  border: 1px solid hsl(0, 36%, 70%);
+  font-size: 15px;
+  padding-left: 15px;
+  margin-right: 10px;
+}
+
+input[type=email]:focus {
+  outline: none;
+}
+
+input[placeholder] {
+  padding-left: 15px;
+  font-size: .8rem; 
+}
+
+/* Submit Button */
+
+button {
+  --primary-color: hsl(0, 93%, 68%);
+  --secondary-color: #fff;
+  --hover-color:  hsl(0, 80%, 86%);
+  --arrow-width: 20px;
+  --arrow-stroke: 2px;
+  cursor: pointer;
+  height: 40px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+} 
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+ button:hover {
+  background-color: var(--hover-color);
+} 
+
+button:hover .arrow {
+  background: var(--hover-color);
+} 
+
+ button:hover .arrow:before {
+  right: 0;
+} 
+
+/* This is our style for the invalid fields */
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+ 
+/* Footer */
+
+/* footer {
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
+
+/* .attribution {  
+  font-size: 11px; 
+  text-align: center; }
+.attribution a { 
+  color: hsl(228, 45%, 44%); } */
+
+
+  
+  
