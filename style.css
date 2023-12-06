@@ -113,9 +113,6 @@ form button {
   position: relative;
   top: 0;
   right: 0;
-  /* top: 20%;
-  right: -1rem;
-  transform: translateY(-38%); */
   border: none;
   cursor: pointer;
   border-radius: 30px;
