@@ -1,209 +1,206 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
+
 html {
   box-sizing: border-box;
 }
 
 body {
-padding: 0;
-margin: 0;
-font-family: 'Josefin Sans', sans-serif;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.main-wrapper {
-  width: auto;
-  background-image: url("images/bg-pattern-desktop.svg");
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   margin: 0;
+  padding: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  background-image: Linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }
 
 .left-column {
-  flex: 1.5;
-  display: flex;
+  padding: 4rem 8rem;
   flex-direction: column;
-}
-
-.right-column {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
 }
 
 /* Logo */
 .logo-container {
-  padding: 0px 0px 200px 100px;
+  width: 100px;
+  padding: 1.5rem 0 0 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Main Photo */
-.photo-container {
-  flex: 1;
-  position: relative;
+.right-column {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.photo-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
+/* Info/text Container */
 
-/* Info Container */
-.main-header-container {
-  margin: -50px 0px 0px 100px;
-}
-
-.main-header-container h1 {
+h1 {
   color: hsl(0, 36%, 70%);
   font-weight: 300;
   font-size: 2.75rem;
   letter-spacing: 10px;
-  margin: 0px; /*top right bottom left */
-  padding: 0px 0px 5px 0px;
-  
+  line-height: 0.4;
 }
 
-.main-header-container h2 {
-  color: black;
+h2 {
+  color: hsl(0, 6%, 24%);
   font-weight: 600;
   font-size: 2.75rem;
   letter-spacing: 10px;
-  margin: 0px;
-  padding: 0px 0px 5px 0px;
+  line-height: 0.4;
 }
 
-.main-header-container p {
+p {
   color:  hsl(0, 36%, 70%);
   font-weight: 400;
   font-size: .8rem;
-  width: 45%;
+  line-height: 1.6;
 }
 
-/*Form*/
+/*Email Form*/
+
+form {
+  position: relative;
+}
+
+form label {
+  position: absolute;
+  top: 3%;
+  transform: translateY(23%);
+  right: 5rem;
+  display: none;
+}
 
 .email-container {
- padding: 0px 0px 0px 100px;
+  display: flex;
+  width: 100%;
 }
 
 .input-wrapper {
-  position: flex;
-  align-items: center; 
+  display: flex;
+  align-items: center; /* Align items horizontally */
+  width: 100%;
 }
 
-input[type=email] {
-  width: 40%;
+form input {
+  font-family: inherit;
+  font-size: 1rem;
+  width: 275px;
   height: 40px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 30px;
   opacity: 40%;
-  border: 1px solid hsl(0, 36%, 70%);
-  font-size: 15px;
-  padding-left: 15px;
-  margin-right: 10px;
+  border: 1px solid hsl(0, 6%, 24%);
+  padding-left: 0.8rem 1rem;
+  margin-right: 2rem 0 0;
 }
 
-input[type=email]:focus {
-  outline: none;
-}
-
-input[placeholder] {
+form input::placeholder {
+  color: hsl(0, 6%, 24%);
   padding-left: 15px;
   font-size: .8rem; 
 }
 
 /* Submit Button */
 
-button {
-  --primary-color: hsl(0, 93%, 68%);
-  --secondary-color: #fff;
-  --hover-color:  hsl(0, 80%, 86%);
-  --arrow-width: 20px;
-  --arrow-stroke: 2px;
-  cursor: pointer;
-  height: 40px;
-  box-sizing: border-box;
-  border: 0;
-  border-radius: 20px;
-  color: var(--secondary-color);
-  padding: 1em 1.8em;
-  background: var(--primary-color);
-  display: flex;
-  transition: 0.2s background;
-  align-items: center;
-  gap: 0.6em;
-  font-weight: bold;
-}
-
-button .arrow-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-button .arrow {
-  margin-top: 1px;
-  width: var(--arrow-width);
-  background: var(--primary-color);
-  height: var(--arrow-stroke);
+form button {
   position: relative;
-  transition: 0.2s;
+  top: 0;
+  right: 0;
+  /* top: 20%;
+  right: -1rem;
+  transform: translateY(-38%); */
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 0.6rem 1.8rem;
+  margin-left: -40px;
+  background-image: Linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  transition: 0.3s;
 } 
-
-button .arrow::before {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  border: solid var(--secondary-color);
-  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
-  display: inline-block;
-  top: -3px;
-  right: 3px;
-  transition: 0.2s;
-  padding: 3px;
-  transform: rotate(-45deg);
-}
 
  button:hover {
-  background-color: var(--hover-color);
+  background-image: Linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 80%, 86%));
 } 
 
-button:hover .arrow {
-  background: var(--hover-color);
-} 
-
- button:hover .arrow:before {
-  right: 0;
-} 
-
-/* This is our style for the invalid fields */
-input:invalid {
-  border-color: #900;
-  background-color: #fdd;
+.error {
+  color: hsl(0, 93%, 68%);
+  text-align: left;
+  margin-top: 0.5rem;
+  display: none;
 }
-
-input:focus:invalid {
-  outline: none;
-}
-
  
 /* Footer */
 
-/* footer {
+footer {
   padding: 10px;
   position: absolute;
-  bottom: 0;
+  bottom: 10;
   width: 100%;
-} */
+  background-color: hsl(0, 100%, 98%);
+} 
 
-/* .attribution {  
-  font-size: 11px; 
+.attribution {  
+  font-size: 12px; 
   text-align: center; }
 .attribution a { 
-  color: hsl(228, 45%, 44%); } */
+  color: hsl(228, 45%, 44%); } 
+
+/* For screens wider than 768px */
+
+@media (min-width: 768px) {
+  body {
+    background: url("images/bg-pattern-desktop.svg") 
+    no-repeat center/cover;
+  }
+
+  .logo-container {
+    padding: 3rem 0 0 16rem;
+  }
+
+  .right-column picture img {
+    margin-top: -8rem;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .left-column {
+    order: 1; /* Ensure left column appears first */
+    padding: 4rem 2rem;
+    margin: -10rem 0 0 0;
+  }
+
+  .right-column {
+    order: 2; /* Ensure right column appears second */
+  }
+
+  h1,
+  h2,
+  p {
+    text-align: left;
+  }
+
+  .main-header-container {
+    width: 50%;
+  }
+
+  form input {
+    width: 400px;
+  }
+}
+/* End Media Query */
 
 
   

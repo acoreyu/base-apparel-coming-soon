@@ -3,63 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
   <link rel="stylesheet" href="style.css">
-
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-   
 </head>
+
 <body>
-  <div class="main-wrapper" id="main-header-container">
-      <!-- Logo -->
-      <div class="left-column">
-       <div class="logo-container">
-        <img id="logo" src="images/logo.svg">
-      </div>
+  <!-- Logo -->
+  <div class="logo-container">
+    <img id="logo" src="images/logo.svg">
+  </div> <!-- Logo end -->
+  <main>
+      <div class="container">
+      <!-- Main Photo -->
+      <div class="right-column">
+        <picture>
+          <!-- large image -->
+          <source srcset="images/hero-desktop.jpg"
+          media="(min-width: 768px)">
+          <!-- smallest image (default)--> 
+          <img src="images/hero-mobile.jpg" alt="Main image">
+        </picture>
+      </div> 
+
     <!-- Main Header/Info Text -->
-  <div class="main-header-container">
-    <h1>WE'RE</h1>
-    <h2>COMING</h2>
-    <h2>SOON</h2>
-    <p>
+    <div class="left-column">
+      <div class="main-header-container">
+      <h1>WE'RE</h1>
+      <h2>COMING</h2>
+      <h2>SOON</h2>
+      <p>
       Hello fellow shoppers! We're currently building our new fashion store. 
       Add your email below to stay up-to-date with announcements and our launch deals.
-        </p>
-    </div>
- 
-    <!-- Email -->
-  <div class="email-container">
-    <form id="email-form">
-      <div class="input-wrapper">
-       <input placeholder="Email Address" type="email" id="email" required />
-       <button type="submit" id="submit-btn">
-         <div class="arrow-wrapper">
-          <div class="arrow"></div>
-         </div>
-       </button>
-       </div>
-    <!-- Dynamic error msg -->
-      <div id="email-error-msg" class="error-msg"></div>
-      </form>
-    </div>
-  </div>
-   <!-- Main Photo -->
-  <div class="right-column">
-    <div class="photo-container">
-        <img src="images/hero-desktop.jpg">
+      </p>
+
+      <!-- Email form-->
+      <div class="email-container">
+        <form id="email-form" autocomplete="off">
+          <div class="input-wrapper">
+            <input placeholder="Email Address" name="email" type="email" id="email" required />
+              <label for="email">
+                <img src="./images/icon-error.svg">
+              </label>
+            <button type="submit" id="submit-btn" class="submit">
+              <img src="./images/icon-arrow.svg">
+            </button>
+          </div>
+          <p class="error">Please provide a valid email</p>
+        </form>
       </div>
     </div>
-  </div>  
-  <!-- Script -->
-    <script src="script.js"></script>
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/acoreyu" target="_blank">Corey Uebelacker</a>.
+      </p>
+    </footer>
 
-     <!-- <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/acoreyu" target="_blank">Corey Uebelacker</a>.
-    </p>
-  </footer> -->
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
